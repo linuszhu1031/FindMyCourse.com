@@ -65,7 +65,8 @@
         margin-left: 16%;
       }
       #modal p3{
-        text-align: center;
+        display: flex;
+        justify-content: center;
       }
       .link {
         background-color: black;
@@ -102,10 +103,12 @@
         margin-left: 16%;
       }
     #loginadds p3{
-        margin-left: 24%;
+        display: flex;
+        justify-content: center;
       }
     #loginadds p4{
-        margin-left: 15%;
+        display: flex;
+        justify-content: center;
       }
     </style>
     <title>Home</title>
@@ -146,11 +149,16 @@
     <!--log in sign up -->
     <div id="shade" class="c1 hide"></div>
     <div id="modal" class="c2 hide">
-      <img src="./images/symbol.png">
+      
       <form method="post" action="create_user.php">
+      <p><input type="text" name="username" placeholder="Enter A Username"style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" /></p>
       <p><input type="text" name="email" placeholder="Email Address"style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px;" /></p>
       <p><input type="password" name="password" placeholder="Set A Password" style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" /></p>
-      <p><input type="text"name="summoner_name" placeholder="Summoner Name" style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;"  /></p>
+      <p><select name="level" style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" />
+        <option value = "undergraduate">Undergraduate</option>
+        <option value = "graduate">Graduate</option>
+        </select>
+      </p>
       <p2>
         <input type="submit" value="Log In" style="margin-top: 30px; width: 120px;">
         <input type="button" value="Cancel" onclick="Hide();" style="margin-left: 30px; width: 120px;">
@@ -163,16 +171,11 @@
     <div id="loginadds" class="c3 hide">
       <img src="./images/symbol.png">
       <form method="post" action="login.php">
-      <p><input type="text" name="username" placeholder="Enter A Username"style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" /></p>
       <p><input type="text" name="login_email" placeholder="Enter Your Email Address"style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" /></p>
       <p><input type="password" name="login_password" placeholder="Enter Your Password" style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" /></p>
-      <p><select name="level" style="background-color:transparent; border-style: solid; border-top-width: 0px;border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; border-color: white; width: 280px; color:white;" />
-        <option value = "undergraduate">Undergraduate</option>
-        <option value = "graduate">Graduate</option>
-        </select>
-      </p>
+      
       <p2>
-        <input type="submit" value="Log In" style="margin-top: 30px; width: 120px;">
+        <input type="submit" value="Log In" style="margin-top: 50px; width: 120px;">
         <input type="button" value="Cancel" onclick="HideLog();" style="margin-left: 30px; width: 120px;">
       </p2>
       </form>
