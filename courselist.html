@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FindMyCourse.com</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+  <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+  
+  <script type="text/javascript" src="js/coursefilter.js"> </script>
+
+
+</head>
+
+<body>
+    <style>
+    .dropdown-menu {
+    width:  200px !important;
+    height: 150px !important;
+
+    }    
+
+    .multiselect-container {
+        width: 100% !important;
+        overflow-y: scroll; 
+    }
+
+    .form-control{
+        width: 30% 
+    }
+
+ .heart {
+    background: #ffffff;
+    box-shadow: none !important ; 
+    outline:none !important; 
+    border: none !important ; 
+    outline-color: none !important ; 
+
+    position: relative;
+    padding-right: 40px ; 
+    /* Adjust these values accordingly */
+
+}
+
+.heart:focus{
+        background: white ; 
+        box-shadow: none !important ; 
+        outline:none !important; 
+        border: none !important ; 
+        outline-color: none !important ; 
+    }
+
+.heart:active, .active {
+    background: lightblue !important ; 
+    box-shadow: none !important ; 
+    outline:none !important; 
+    border: none !important ; 
+    outline-color: none !important ; 
+}
+
+/* .btn:hover, .hover {
+    background: white ; 
+        border: none ; 
+        outline-color: none ; 
+        outline: none ;   
+} */
+
+/* .btn-light-success.active.focus {
+  color: black ;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+} */
+
+   .slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  border-radius: 5px ; 
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50% ;
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50% ;
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+    </style>
+ 
+
+    <!-- Navigation Bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">FindMyCourse</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="courselist.html">Course List <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="findmycourse.html">Find My Course</a>
+                    </li>
+
+                    <li class="nav-item">
+                            <a class="nav-link" href="findaresearchgroup.html">Find My Research Group</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="navbar-collapse collapse w-200 order-2 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign In</a>
+                        </li>
+                    </ul>
+            </div>
+    </nav>
+
+    <!-- <div class="container"> 
+            <div class="col-md-12 text-center">
+                <label class="text-black mb-3 lead" style="margin-top: 50px "></label>
+                    <h4> Direct Course Search</h4>
+                    <select class="custom-select" id="filtering" multiple="multiple">
+                        <option value="cheese">Cheese</option>
+                        <option value="tomatoes">Tomatoes</option>
+                        <option value="mozzarella">Mozzarella</option>
+                        <option value="mushrooms">Mushrooms</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="onions">Onions</option>
+                        <option value="bacon">Bacon</option>
+                        <option value="potatoes">Potatoes</option>
+                    </select>
+            </div>
+    </div> -->
+
+    <!-- Search form -->
+    <div class="container-fluid" style="margin-top: 50px "> 
+        <div row class="text-center"> 
+                <h4>Course Search Up</h4>
+                <input class="form-control" style="margin:auto" type="text" placeholder="Search" aria-label="Search"> 
+        </div>
+    </div>  
+
+    
+
+    
+    <div class="container-fluid" style="margin-top:50px ">
+        <div class="row" >
+            <div class="col-md-8">
+                <h4>List of Courses</h4>
+                <div class="card" style="width: 60rem;">
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item">
+                                    <div class="d-flex justify-content-between">
+                                            <div>
+                                                <button type="button" class="btn btn-light heart" data-toggle="buttons" style="margin-left: 0px;">
+                                                        <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
+                                                </button>
+                                                ECE 342
+
+                                            </div>
+                                            <div>
+                                                Area: Circuits, Average GPA: 3.2 
+                                            </div>
+                                        </div>                
+                            </li>
+
+                            <li class="list-group-item">
+                                    <div class="d-flex justify-content-between">
+                                            <div>
+                                                <button type="button" class="btn btn-light heart" data-toggle="buttons" style="margin-left: 0px;">
+                                                        <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
+                                                </button>    
+                                                CS 405
+
+                                            </div>
+                                            <div>
+                                                Area: Database, Average GPA: 3.4 
+                                            </div>
+                                        </div>                
+                            </li>
+
+                            <li class="list-group-item">
+                                    <div class="d-flex justify-content-between">
+                                            <div>
+
+                                                <button type="button" class="btn btn-light heart" data-toggle="buttons" style="margin-left: 0px;">
+                                                        <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
+                                                </button>
+                                                ME 450 
+                                            </div>
+                                            <div>
+                                                Area: Robotics, Average GPA: 3.1 
+                                            </div>
+                                        </div>                
+                            </li>
+
+                        </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-4" style="margin-right:0px" > 
+                    <div class="container"> 
+                        
+                        <h4>Area</h4>
+                        <select class="custom-select" id="filtering" multiple="multiple">
+                            <option value="circuits">Circuits</option>
+                            <option value="signalsprocessing">Signals Processing</option>
+                            <option value="speechprocessing">Speech Processing</option>
+                            <option value="autonomy">Autonomy</option>
+                            <option value="dynamic">Dynamic</option>
+                            <option value="robotics">Robotics</option>
+                            <option value="compiler">Compiler</option>
+                            <option value="embedded">Embedded</option>
+                        </select>
+
+
+                        <div class="text" style="margin-top:160px">
+                            <h4>Department</h4>
+                        </div>
+                        <select class="custom-select" id="department" multiple="multiple">
+                            <option value="ece">ECE</option>
+                            <option value="cs">CS</option>
+                            <option value="me">ME</option>
+                        </select>
+
+                        
+                        <div class="slidecontainer" style="margin-top:160px">
+                                <h4>Difficulty/Average GPA</h4>
+                                <div class="text-center">
+                                    <input type="range" min="0.0" max="4.0" value="2.0" step="0.1" class="slider" id="myRange">
+                                    <p>Value: <span id="demo"></span> GPA</p>
+
+                                </div>
+                                
+                        </div>
+                    
+                        <script>
+                                var slider = document.getElementById("myRange");
+                                var output = document.getElementById("demo");
+                                
+                                output.innerHTML = slider.value; // Display the default slider value
+                        
+                                // Update the current slider value (each time you drag the slider handle)
+                                slider.oninput = function() {
+                                    output.innerHTML = this.value;
+                                }
+                        </script>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+</html>
