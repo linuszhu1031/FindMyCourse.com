@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  margin: 100;
+  font-family: sans-serif;
+}
+p {
+margin-top: 40px;
+font-size: 160%;
+
+}
+.lb-sm {
+  font-size: 100px;
+}
+
+
+.header {
+  text-align: left;
+  padding: 10px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 0%; /* IE10 */
+  flex: 25%;
+  max-width: 40%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 500px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+
+<!-- <div class="col-md-4">
+    <div class="card mb-2">
+        <img class="card-img-top"
+        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
+        alt="Card image cap">
+        <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.</p>
+        <a class="btn btn-primary">Button</a>
+        </div>
+    </div>
+</div> -->
+<!-- Navigation Bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="index.html">FindMyCourse</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="courselist.html">Course List <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="findmycourse.html">Find My Course</a>
+                  </li>
+                  <li class="nav-item">
+                          <a class="nav-link" href="findaresearchgroup.html">Find My Research Group</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="navbar-collapse collapse w-200 order-2 dual-collapse2">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Sign Up</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Sign In</a>
+                      </li>
+                  </ul>
+          </div>
+  </nav>
+
+  <p class="text-lg-center font-weight-light"> What interests you? Choose as many fields as you like! </p>
+
+  <div class="row">
+    <div class="column">
+
+      <img src="programming.jpg">
+      <div class="checkbox">
+        <label> <input type="checkbox" value=""> Programming</label>
+      </div>
+      <img src="data.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Data Science </label>
+      </div>
+
+      <img src="chem.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Chemistry/Chemical Engineering </label>
+      </div>
+
+    </div>
+    <div class="column">
+      <img src="photography.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" style="margin-top: 0.125em;" value=""> Photography</label>
+      </div>
+      <img src="architecture.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Architecture</label>
+      </div>
+      <img src="art.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Art & Design</label>
+      </div>
+
+    </div>
+    <div class="column">
+      <img src="music.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Music</label>
+      </div>
+      <img src="electrical.jpg">
+      <div class="checkbox">
+        <label><input type="checkbox" value=""> Electrical Engineering</label>
+      </div>
+
+      <img src="ling.jpg">
+      <div class="checkbox">
+        <label> <input type="checkbox" value=""> Linguistics</label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-right">
+    <a href="#" class="btn btn-info btn-lg">Move on to Choose your Activities! </a>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+</html>
