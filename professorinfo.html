@@ -8,6 +8,7 @@
   <title>Professor Info</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -15,7 +16,44 @@
 </head>
 
 <body>
+  <!-- Navigation Bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">FindMyCourse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="courselist.html">Course List <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="findmycourse.html">Find My Course</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="findaresearchgroup.html">Find My Research Group</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-collapse collapse w-200 order-2 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign In</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
   <h1 style="text-align: center; margin-top: 5vh; margin-bottom: 5vh;">Margaret M. Fleck</h1>
+  <button type="button" class="btn btn-light heart" data-toggle="buttons" style="margin-left: 90vw; margin-top: -10vh;">
+    <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
+  </button>
   <img src="pictures/professors/mfleck.png" style="margin: 0 auto; width: 30vw; height: 37vh; display: block; margin-bottom: 5vh;" />
   <h5 style="text-align: center;">Phone: 217-265-6838</h5>
   <h5 style="text-align: center; margin-bottom: 5vh;">Website: http://mfleck.cs.illinois.edu/</h5>

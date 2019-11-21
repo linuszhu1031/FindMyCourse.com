@@ -1,58 +1,52 @@
-
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOltdfQ== */
-
-
 /* For Properties of Buttons  */
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-        height: 50px;
-        width: 50px;
-        outline: black;
-        filter: invert(100%);
-        background-size: 50%, 50%;
-    } 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+  outline: black;
+  filter: invert(100%);
+  background-size: 50%, 50%;
+}
 
-    /* For Right Next Button  */
-    .carousel-control-next{  
-        top: 50%;
-        bottom: 50%;
-        right:-15px;
-    }
+/* For Right Next Button  */
+.carousel-control-next {
+  top: 50%;
+  bottom: 50%;
+  right: -15px;
+}
 
-    /* For Left Previous Button  */
-    .carousel-control-prev{
-        top: 50%;
-        bottom: 50%;
-        left:-55px ;
-    }
-    
-    /* .carousel-item {
+/* For Left Previous Button  */
+.carousel-control-prev {
+  top: 50%;
+  bottom: 50%;
+  left: -55px;
+}
+
+/* .carousel-item {
         height: 350px;
     } */
+/* For Non-active indicators  */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: gray;
+}
 
-    /* For Non-active indicators  */
-    .carousel-indicators li {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background-color:gray;
+/* For Active indicators  */
+.carousel-indicators .active {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: black;
+}
 
-    }
+/* Position of indicators  */
+.carousel-indicators {
+  bottom: -50px;
+}
 
-    /* For Active indicators  */
-    .carousel-indicators .active {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-        background-color:black;
-    }
-
-    /* Position of indicators  */
-    .carousel-indicators {
-        bottom: -50px;
-    }
-    
-    /* Generic Background Color  */
-    body {
-        background-color: white;
-    }
-    
+/* Generic Background Color  */
+body {
+  background-color: white;
+}
