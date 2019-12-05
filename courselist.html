@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FindMyCourse.com</title>
+  <title>courselist</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ=" crossorigin="anonymous" />
@@ -23,6 +23,9 @@
 
 <body>
     <style>
+        body{
+            background-image: url(pictures/background/testbg.png) ; 
+        }
     .dropdown-menu {
     width:  200px !important;
     height: 150px !important;
@@ -34,9 +37,14 @@
         overflow-y: scroll; 
     }
 
-    .form-control{
+    #courseSearch{
         width: 30% 
     }
+
+    #GPA{
+        margin-right: 50px ; 
+    }
+
 
  .heart {
     background: #ffffff;
@@ -121,12 +129,46 @@
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
+
+
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
     </style>
  
 
     <!-- Navigation Bar  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">FindMyCourse</a>
+            <a class="navbar-brand" href="home.html">FindMyCourse</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -153,7 +195,7 @@
                             <a class="nav-link" href="#">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign In</a>
+                            <a class="nav-link" href="#">Log In</a>
                         </li>
                     </ul>
             </div>
@@ -180,7 +222,7 @@
     <div class="container-fluid" style="margin-top: 50px "> 
         <div row class="text-center"> 
                 <h4>Course Search Up</h4>
-                <input class="form-control" style="margin:auto" type="text" placeholder="Search" aria-label="Search"> 
+                <input class="form-control" id="courseSearch" onkeyup="myFunction()" style="margin:auto" type="text" placeholder="Search" aria-label="Search"> 
         </div>
     </div>  
 
@@ -191,7 +233,7 @@
         <div class="row" >
             <div class="col-md-8">
                 <h4>List of Courses</h4>
-                <div class="card" style="width: 60rem;">
+                <div class="card" style="width: 60rem;" id="courseLook" >
                         <ul class="list-group list-group-flush">
 
                             <li class="list-group-item">
@@ -201,12 +243,11 @@
                                                         <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
                                                 </button>
                                                 ECE 342
-
                                             </div>
                                             <div>
                                                 Area: Circuits, Average GPA: 3.2 
                                             </div>
-                                        </div>                
+                                    </div>                
                             </li>
 
                             <li class="list-group-item">
@@ -216,18 +257,16 @@
                                                         <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
                                                 </button>    
                                                 CS 405
-
                                             </div>
                                             <div>
                                                 Area: Database, Average GPA: 3.4 
                                             </div>
-                                        </div>                
+                                    </div>                
                             </li>
 
                             <li class="list-group-item">
                                     <div class="d-flex justify-content-between">
                                             <div>
-
                                                 <button type="button" class="btn btn-light heart" data-toggle="buttons" style="margin-left: 0px;">
                                                         <span class="oi oi-heart" title="heart" aria-hidden="true"></span>
                                                 </button>
@@ -236,7 +275,7 @@
                                             <div>
                                                 Area: Robotics, Average GPA: 3.1 
                                             </div>
-                                        </div>                
+                                    </div>                
                             </li>
 
                         </ul>
@@ -248,29 +287,39 @@
                     <div class="container"> 
                         
                         <h4>Area</h4>
-                        <select class="custom-select" id="filtering" multiple="multiple">
+                        <select class="custom-select" id="filtering" onChange="areaSelect(this)" multiple="multiple">
                             <option value="circuits">Circuits</option>
                             <option value="signalsprocessing">Signals Processing</option>
                             <option value="speechprocessing">Speech Processing</option>
                             <option value="autonomy">Autonomy</option>
                             <option value="dynamic">Dynamic</option>
                             <option value="robotics">Robotics</option>
+                            <option value="database">Database</option>
                             <option value="compiler">Compiler</option>
                             <option value="embedded">Embedded</option>
                         </select>
 
 
-                        <div class="text" style="margin-top:160px">
+                        <div class="text" style="margin-top:50px">
                             <h4>Department</h4>
                         </div>
-                        <select class="custom-select" id="department" multiple="multiple">
+                        <select class="custom-select" id="department" onChange="departmentSelect(this)" multiple="multiple">
                             <option value="ece">ECE</option>
                             <option value="cs">CS</option>
                             <option value="me">ME</option>
                         </select>
 
+
+                        <div class="text" style="margin-top: 50px "> 
+                                <div row class="text-left" style="width: 400px "> 
+                                        <h4>Difficulty/Average GPA</h4>
+                                        <input class="form-control" id="GPA" onkeyup="myGPA()" style="margin:left" type="text" placeholder="Enter Min GPA" aria-label=""> 
+                                </div>
+                        </div> 
                         
-                        <div class="slidecontainer" style="margin-top:160px">
+
+                                                
+                        <!-- <div class="slidecontainer" style="margin-top:160px">
                                 <h4>Difficulty/Average GPA</h4>
                                 <div class="text-center">
                                     <input type="range" min="0.0" max="4.0" value="2.0" step="0.1" class="slider" id="myRange">
@@ -278,9 +327,9 @@
 
                                 </div>
                                 
-                        </div>
-                    
-                        <script>
+                        </div> -->
+
+                        <!-- <script>
                                 var slider = document.getElementById("myRange");
                                 var output = document.getElementById("demo");
                                 
@@ -290,12 +339,210 @@
                                 slider.oninput = function() {
                                     output.innerHTML = this.value;
                                 }
-                        </script>
+                        </script> -->
                     </div>
             </div>
         </div>
     </div>
 
+
+    
+        <!-- Search Bar Script -->
+        <script>
+            function myFunction() {
+              var input, filter, table, li, td, i, txtValue;
+
+              input = document.getElementById("courseSearch");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("courseLook");
+              li = table.getElementsByTagName("li");
+
+              for (i = 0; i < li.length; i++) 
+              {
+                td = li[i].getElementsByTagName("div")[0];
+                
+                if (td) 
+                {
+                  txtValue = td.textContent || td.innerText;
+                  txtValue = txtValue.substr(0, txtValue.lastIndexOf("Area") ) ; 
+                  
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) 
+                  {
+                    li[i].style.display = "";
+                  } 
+                  else 
+                  {
+                    li[i].style.display = "none";
+                  }
+                }       
+              }
+            }
+        </script>
+
+        <!-- Area Select Script -->
+        <script>
+            function areaSelect( currInput) { 
+                var input, filter, table, li, td, i, txtValue;
+                
+                // input = document.getElementById("filtering");
+                // filter = input.value.toUpperCase();
+                table = document.getElementById("courseLook");
+                li = table.getElementsByTagName("li");
+              
+                var result = [];
+                var options = currInput && currInput.options;
+                var opt;
+
+                for (var i=0, iLen=options.length; i<iLen; i++) {
+                    opt = options[i];
+                    
+
+                if (opt.selected) {
+                    console.log(opt)
+                    result.push(opt.value || opt.text);
+                    }
+                }
+
+               console.log(result)
+              for (i = 0; i < li.length; i++) 
+              {
+                td = li[i].getElementsByTagName("div")[0];
+                var counter = 0 ;
+
+                if (td) 
+                {
+                  txtValue = td.textContent || td.innerText;
+                   
+                  txtValue = txtValue.substr(txtValue.lastIndexOf("Area")+6, txtValue.length ) ; 
+                  txtValue = txtValue.substr(0, txtValue.lastIndexOf(", Average GPA" )) ; 
+                  console.log(txtValue)
+                  for ( i2 = 0 ; i2 < result.length; i2++ )
+                  {
+                      console.log(txtValue.toLowerCase().indexOf(result[i2] ) ) 
+
+                    if (txtValue.toLowerCase().indexOf(result[i2]) > -1) 
+                    {
+                        counter = 1 ; 
+                        break ; 
+                    } 
+                  }
+
+                    if (counter == 1 || result.length == 0 ) 
+                    {
+                        console.log(txtValue)
+                        li[i].style.display = "";
+                    } 
+                    else 
+                    {
+                        li[i].style.display = "none";
+                    }
+
+                }       
+              }              
+            }
+        </script>
+
+        <!-- Department Select Script -->
+        <script>
+            function departmentSelect( currInput) { 
+                var input, filter, table, li, td, i, txtValue;
+                
+                // input = document.getElementById("filtering");
+                // filter = input.value.toUpperCase();
+                table = document.getElementById("courseLook");
+                li = table.getElementsByTagName("li");
+              
+                var result = [];
+                var options = currInput && currInput.options;
+                var opt;
+
+                for (var i=0, iLen=options.length; i<iLen; i++) {
+                    opt = options[i];
+                    
+
+                if (opt.selected) {
+                    console.log(opt)
+                    result.push(opt.value || opt.text);
+                    }
+                }
+
+               console.log(result)
+              for (i = 0; i < li.length; i++) 
+              {
+                td = li[i].getElementsByTagName("div")[0];
+                var counter = 0 ;
+
+                if (td) 
+                {
+                  txtValue = td.textContent || td.innerText;
+                  
+                  txtValue = txtValue.substr(0, txtValue.lastIndexOf("Area") ) ; 
+                //   txtValue = txtValue.substr(0, txtValue.lastIndexOf(", Average GPA" )) ; 
+                  console.log(txtValue)
+                  for ( i2 = 0 ; i2 < result.length; i2++ )
+                  {
+                      console.log(txtValue.toLowerCase().indexOf(result[i2] ) ) 
+
+                    if (txtValue.toLowerCase().indexOf(result[i2]) > -1) 
+                    {
+                        counter = 1 ; 
+                        break ; 
+                    } 
+                  }
+
+                    if (counter == 1 || result.length == 0 ) 
+                    {
+                        console.log(txtValue)
+                        li[i].style.display = "";
+                    } 
+                    else 
+                    {
+                        li[i].style.display = "none";
+                    }
+
+                }       
+              }              
+            }        
+        
+        </script>
+
+        <!-- GPA Select Script -->
+        <script>
+        function myGPA() {
+          var input, filter, table, li, td, i, txtValue;
+
+          input = document.getElementById("GPA");
+          filter = parseFloat(input.value) ;
+          table = document.getElementById("courseLook");
+          li = table.getElementsByTagName("li");
+
+          for (i = 0; i < li.length; i++) 
+          {
+            td = li[i].getElementsByTagName("div")[0];
+            
+            if (td) 
+            {
+              txtValue = td.textContent || td.innerText;
+              txtValue = txtValue.substr(txtValue.lastIndexOf("GPA") + 5, txtValue.length ) ;
+              txtValue = parseFloat(txtValue)
+              
+              console.log(filter)
+              
+              if (txtValue >= filter ) 
+              {
+                li[i].style.display = "";
+              } 
+              else 
+              {
+                if ( !isNaN(filter) )
+                {
+                    li[i].style.display = "none";
+                }
+              }
+            }       
+          }
+        }
+        </script>
 
 
 
