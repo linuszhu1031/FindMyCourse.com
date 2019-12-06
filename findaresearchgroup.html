@@ -58,30 +58,30 @@
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="dropdown">
-          <button style="margin-left: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button style="margin-left: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle selectDepartment" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span>Select Department</span>
           </button>
-          <ul class="dropdown-menu selectDepartment" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Computer Science</a></li>
-            <li><a class="dropdown-item" href="#">Electrical and Computer Engineering</a></li>
-            <li><a class="dropdown-item" href="#">Finance</a></li>
-            <li><a class="dropdown-item" href="#">Linguistics</a></li>
-            <li><a class="dropdown-item" href="#">Yiddish</a></li>
+          <ul class="dropdown-menu selectDepartmentList" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#" id="cs">Computer Science</a></li>
+            <li><a class="dropdown-item" href="#" id="ece">Electrical and Computer Engineering</a></li>
+            <li><a class="dropdown-item" href="#" id="fin">Finance</a></li>
+            <li><a class="dropdown-item" href="#" id="ling">Linguistics</a></li>
+            <li><a class="dropdown-item" href="#" id="yid">Yiddish</a></li>
           </ul>
         </div>
       </div>
 
       <div class="col-md-6 text-center">
         <div class="dropdown">
-          <button style="margin-right: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button style="margin-right: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle selectArea" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span>Select Area</span>
           </button>
-          <ul class="dropdown-menu selectArea" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Circuits and Signal Processing</a></li>
-            <li><a class="dropdown-item" href="#">Computing Systems Hardware and Software</a></li>
-            <li><a class="dropdown-item" href="#">Artificial Intelligence and Autonomous Systems</a></li>
-            <li><a class="dropdown-item" href="#">Corporate Finance</a></li>
-            <li><a class="dropdown-item" href="#">Neurolinguistics and ERP Methods</a></li>
+          <ul class="dropdown-menu selectAreaList" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#" id="sig">Circuits and Signal Processing</a></li>
+            <li><a class="dropdown-item" href="#" id="compv">Computer Vision</a></li>
+            <li><a class="dropdown-item" href="#" id="ai">Artificial Intelligence</a></li>
+            <li><a class="dropdown-item" href="#" id="corp-fin">Corporate Finance</a></li>
+            <li><a class="dropdown-item" href="#" id="neuro">Neurolinguistics and ERP Methods</a></li>
           </ul>
         </div>
       </div>
@@ -96,36 +96,30 @@
           <div class="row" style="margin-right: 0vh">
 
             <!-- List of Professors  for 1st Slide-->
-            <div class="col-md-4 text-center">
-              <img src="pictures/professors/dumbledore.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor Dumbledore</h5>
-              <h5>Area: Lemon Sucking</h5>
+            <div class="col-md-4 text-center" id="fleck">
+              <a href="fleck-info.html"><img src="pictures/professors/fleck-fac.jpeg" style="border-radius: 50%; width: 125px; height: 125px;" /></a>
+              <h5 style="margin-top: 3vh;">Margaret Fleck</h5>
+              <h5>Area: Artificial Intelligence</h5>
             </div>
-            <div class="col-md-4 text-center">
-              <img src="pictures/professors/snape.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor Snape</h5>
-              <h5>Area: Greasy Boi</h5>
+            <div class="col-md-4 text-center" id="green">
+              <a href="green-info.html"><img src="pictures/professors/green-fac.png" style="border-radius: 50%; width: 125px; height: 125px;" /></a>
+              <h5 style="margin-top: 3vh;">Jeffrey Green</h5>
+              <h5>Area: Neurolinguistics, Psycholinguistics</h5>
             </div>
-            <div class="col-md-4 text-center">
-              <img src="pictures/professors/mcgonagall.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor McGonagall</h5>
-              <h5>Area: Cat Thing</h5>
+            <div class="col-md-4 text-center" id="huang">
+              <a href="huang-info.html"><img src="pictures/professors/huang-fac.jpeg" style="border-radius: 50%; width: 125px; height: 125px;" /></a>
+              <h5 style="margin-top: 3vh;">Thomas Huang</h5>
+              <h5>Area: Computer Vision</h5>
             </div>
-
-            <div class="col-md-4 text-center" style="margin-top: 5vh;">
-              <img src="pictures/professors/dumbledore.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor Dumbledore</h5>
-              <h5>Area: Lemon Sucking</h5>
+            <div class="col-md-4 text-center" id="lazebnik">
+              <a href="lazebnik-info.html"><img src="pictures/professors/svetlana-fac.png" style="border-radius: 50%; width: 125px; height: 125px;" /></a>
+              <h5 style="margin-top: 3vh;">Svetlana Lazebnik</h5>
+              <h5>Area: Artificial Intelligence, Computer Vision</h5>
             </div>
-            <div class="col-md-4 text-center" style="margin-top: 5vh;">
-              <img src="pictures/professors/snape.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor Snape</h5>
-              <h5>Area: Greasy Boi</h5>
-            </div>
-            <div class="col-md-4 text-center" style="margin-top: 5vh;">
-              <img src="pictures/professors/mcgonagall.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
-              <h5 style="margin-top: 3vh;">Professor McGonagall</h5>
-              <h5>Area: Cat Thing</h5>
+            <div class="col-md-4 text-center" id="smaragdis">
+              <a href="smaragdis-info.html"><img src="pictures/professors/paris-fac.jpeg" style="border-radius: 50%; width: 125px; height: 125px;" /></a>
+              <h5 style="margin-top: 3vh;">Paris Smaragdis</h5>
+              <h5>Area: Signal Processing</h5>
             </div>
           </div>
         </div>
