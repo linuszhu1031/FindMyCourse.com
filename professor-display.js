@@ -48,6 +48,18 @@ $(function() {
 
 $(function() {
   $("#cs").click(function() {
+    $("#corp-fin").click(function() {
+      $("#fleck").hide();
+      $("#green").hide();
+      $("#huang").hide();
+      $("#lazebnik").hide();
+      $("#smaragdis").hide();
+    });
+  });
+});
+
+$(function() {
+  $("#cs").click(function() {
     $("#sig").click(function() {
       $("#fleck").hide();
       $("#green").hide();
@@ -112,6 +124,30 @@ $(function() {
       $("#huang").hide();
       $("#lazebnik").hide();
       $("#smaragdis").show();
+    });
+  });
+});
+
+$(function() {
+  $("#ece").click(function() {
+    $("#corp-fin").click(function() {
+      $("#fleck").hide();
+      $("#green").hide();
+      $("#huang").hide();
+      $("#lazebnik").hide();
+      $("#smaragdis").hide();
+    });
+  });
+});
+
+$(function() {
+  $("#ece").click(function() {
+    $("#ling").click(function() {
+      $("#fleck").hide();
+      $("#green").hide();
+      $("#huang").hide();
+      $("#lazebnik").hide();
+      $("#smaragdis").hide();
     });
   });
 });
