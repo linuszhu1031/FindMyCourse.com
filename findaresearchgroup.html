@@ -12,6 +12,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="professor-display.js"></script>
+
 </head>
 
 
@@ -56,31 +58,31 @@
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="dropdown">
-          <button style="margin-left: 20vh" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select Department &nbsp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <button style="margin-left: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Select Department</span>
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Computer Science</a>
-            <a class="dropdown-item" href="#">Electrical and Computer Engineering</a>
-            <a class="dropdown-item" href="#">Finance</a>
-            <a class="dropdown-item" href="#">Linguistics</a>
-            <a class="dropdown-item" href="#">Yiddish</a>
-          </div>
+          <ul class="dropdown-menu selectDepartment" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Computer Science</a></li>
+            <li><a class="dropdown-item" href="#">Electrical and Computer Engineering</a></li>
+            <li><a class="dropdown-item" href="#">Finance</a></li>
+            <li><a class="dropdown-item" href="#">Linguistics</a></li>
+            <li><a class="dropdown-item" href="#">Yiddish</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="col-md-6 text-center">
         <div class="dropdown">
-          <button style="margin-right: 20vh" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select Area &nbsp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp &nbsp &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <button style="margin-right: 20vh; width: 16.2vw" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>Select Area</span>
           </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Circuits and Signal Processing</a>
-            <a class="dropdown-item" href="#">Computing Systems Hardware and Software</a>
-            <a class="dropdown-item" href="#">Artificial Intelligence and Autonomous Systems</a>
-            <a class="dropdown-item" href="#">Corporate Finance</a>
-            <a class="dropdown-item" href="#">Neurolinguistics and ERP Methods</a>
-          </div>
+          <ul class="dropdown-menu selectArea" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Circuits and Signal Processing</a></li>
+            <li><a class="dropdown-item" href="#">Computing Systems Hardware and Software</a></li>
+            <li><a class="dropdown-item" href="#">Artificial Intelligence and Autonomous Systems</a></li>
+            <li><a class="dropdown-item" href="#">Corporate Finance</a></li>
+            <li><a class="dropdown-item" href="#">Neurolinguistics and ERP Methods</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -115,12 +117,12 @@
               <h5 style="margin-top: 3vh;">Professor Dumbledore</h5>
               <h5>Area: Lemon Sucking</h5>
             </div>
-            <div class="col-md-4 text-center"style="margin-top: 5vh;">
+            <div class="col-md-4 text-center" style="margin-top: 5vh;">
               <img src="pictures/professors/snape.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
               <h5 style="margin-top: 3vh;">Professor Snape</h5>
               <h5>Area: Greasy Boi</h5>
             </div>
-            <div class="col-md-4 text-center"style="margin-top: 5vh;">
+            <div class="col-md-4 text-center" style="margin-top: 5vh;">
               <img src="pictures/professors/mcgonagall.jpg" style="border-radius: 50%; width: 125px; height: 125px;" />
               <h5 style="margin-top: 3vh;">Professor McGonagall</h5>
               <h5>Area: Cat Thing</h5>
