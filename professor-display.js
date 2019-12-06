@@ -59,6 +59,18 @@ $(function() {
 });
 
 $(function() {
+  $("#cs").click(function() {
+    $("#ling").click(function() {
+      $("#fleck").hide();
+      $("#green").hide();
+      $("#huang").hide();
+      $("#lazebnik").hide();
+      $("#smaragdis").hide();
+    });
+  });
+});
+
+$(function() {
   $("#ece").click(function() {
     $("#fleck").hide();
     $("#green").hide();
